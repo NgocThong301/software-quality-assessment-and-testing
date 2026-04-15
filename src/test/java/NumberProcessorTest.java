@@ -3,45 +3,31 @@ import org.junit.jupiter.api.Test;
 
 public class NumberProcessorTest {
 
+    // Path 1: n = 0 (không vào loop)
     @Test
-    void testCase1() {
+    void testN0() {
+        NumberProcessor np = new NumberProcessor();
+        assertEquals(0, np.processNumbers(0));
+    }
+
+    // Path 2: n = 1 (chỉ có số lẻ)
+    @Test
+    void testN1() {
         NumberProcessor np = new NumberProcessor();
         assertEquals(-1, np.processNumbers(1));
     }
 
+    // Path 3: n = 2 (có cả chẵn và lẻ)
     @Test
-    void testCase2() {
+    void testN2() {
         NumberProcessor np = new NumberProcessor();
         assertEquals(1, np.processNumbers(2));
     }
 
+    // Path 4: n = 5 (full mix case)
     @Test
-    void testCase3() {
+    void testN5() {
         NumberProcessor np = new NumberProcessor();
         assertEquals(-3, np.processNumbers(5));
     }
-
-    @Test
-void testPath3() {
-    NumberProcessor np = new NumberProcessor();
-    assertEquals(-3, np.processNumbers(5));
-}
-
-@Test
-void testStatementCoverage() {
-    NumberProcessor np = new NumberProcessor();
-
-    np.processNumbers(0); // không vào loop
-    np.processNumbers(1); // vào else
-    np.processNumbers(2); // vào if + else
-}
-
-@Test
-void testPathCoverage() {
-    NumberProcessor np = new NumberProcessor();
-
-    assertEquals(0, np.processNumbers(0));
-    assertEquals(-1, np.processNumbers(1));
-    assertEquals(-3, np.processNumbers(5));
-}
 }
