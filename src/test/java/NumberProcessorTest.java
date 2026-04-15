@@ -20,4 +20,10 @@ public class NumberProcessorTest {
         NumberProcessor np = new NumberProcessor();
         assertEquals(-3, np.processNumbers(5));
     }
+
+    @Test
+void testPath3() {
+    NumberProcessor np = new NumberProcessor();
+    assertEquals(-3, np.processNumbers(5));
+}
 }
