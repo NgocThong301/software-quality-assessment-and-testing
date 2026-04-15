@@ -26,4 +26,13 @@ void testPath3() {
     NumberProcessor np = new NumberProcessor();
     assertEquals(-3, np.processNumbers(5));
 }
+
+@Test
+void testStatementCoverage() {
+    NumberProcessor np = new NumberProcessor();
+
+    np.processNumbers(0); // không vào loop
+    np.processNumbers(1); // vào else
+    np.processNumbers(2); // vào if + else
+}
 }
