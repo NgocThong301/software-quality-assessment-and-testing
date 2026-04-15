@@ -35,4 +35,13 @@ void testStatementCoverage() {
     np.processNumbers(1); // vào else
     np.processNumbers(2); // vào if + else
 }
+
+@Test
+void testPathCoverage() {
+    NumberProcessor np = new NumberProcessor();
+
+    assertEquals(0, np.processNumbers(0));
+    assertEquals(-1, np.processNumbers(1));
+    assertEquals(-3, np.processNumbers(5));
+}
 }
